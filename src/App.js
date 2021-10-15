@@ -4,17 +4,19 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Weather />
-      <p class="author">
-        <a
-          href="https://github.com/NoBasil12/weather-react"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open-sourse code{" "}
-        </a>
-        , by Francesca Carai
-      </p>
+      <div className="container">
+        <Weather />
+        <footer>
+          <a
+            href="https://github.com/NoBasil12/weather-react"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-sourse code{" "}
+          </a>
+          , by Francesca Carai
+        </footer>
+      </div>
     </div>
   );
 }
