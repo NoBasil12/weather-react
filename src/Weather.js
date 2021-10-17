@@ -3,7 +3,6 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
@@ -11,7 +10,7 @@ export default function Weather(props) {
       ready: true,
       city: response.data.name,
       temperature: response.data.main.temp,
-      date: "Tuesday 10:00",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
       humidity: response.data.main.humidity,
